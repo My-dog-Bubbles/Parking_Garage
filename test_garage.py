@@ -8,7 +8,7 @@ from garage import calculate_fee, enter_garage
 
 def test_enter_garage_car_already_in(garage):
     enter_garage(garage,12,2)
-    with pytest.raises(ValueError)
+    with pytest.raises(ValueError):
         enter_garage(garage, 12,2)
 
 # def test_exit_garage_wrong_ID():
