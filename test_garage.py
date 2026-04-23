@@ -11,7 +11,7 @@ def test_enter_garage_car_already_in(garage):
     with pytest.raises(ValueError):
         enter_garage(garage,12,2)
 
-def test_enter_garage_invalid_hour():
+def test_enter_garage_invalid_hour(garage):
     with pytest.raises(TypeError):
         enter_garage(garage,12,"2")
 # def test_exit_garage_wrong_ID():
