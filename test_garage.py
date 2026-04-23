@@ -1,5 +1,5 @@
 import pytest
-from garage import calculate_fee, enter_garage
+from garage import calculate_fee, enter_garage, exit_garage
 
 def test_enter_garage_car_to_long(garage):
     with pytest.raises(ValueError):
@@ -14,9 +14,10 @@ def test_enter_garage_car_already_in(garage):
 def test_enter_garage_invalid_hour(garage):
     with pytest.raises(TypeError):
         enter_garage(garage,12,"2")
-# def test_exit_garage_wrong_ID():
-#     with pytest.raise(KeyError)
-#         exit_garage(garage, 3)
+
+def test_exit_garage_wrong_ID():
+    with pytest.raise(KeyError)
+        exit_garage(garage, 3)
 
 def test_calculate_fee_hours_or_rate_neg():
     with pytest.raises(ValueError):
