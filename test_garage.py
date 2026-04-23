@@ -7,8 +7,8 @@ def test_enter_garage_car_to_long(garage):
         enter_garage(garage, 5, "2pm")
 
 def test_enter_garage_car_already_in(garage):
-    enter_garage(garage,12,2)
     with pytest.raises(ValueError):
+        enter_garage(garage,12,2)
         enter_garage(garage,12,2)
 
 def test_enter_garage_invalid_hour(garage):
