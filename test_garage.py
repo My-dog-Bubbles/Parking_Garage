@@ -18,6 +18,6 @@ def test_calculate_fee_hours_or_rate_neg():
     with pytest.raises(ValueError):
         calculate_fee(-2,2)
 
-def test_calculate_fee_hours_or_rate_neg():
+def test_calculate_fee_invalid_input():
     with pytest.raises(TypeError):
         calculate_fee(2," ")       
