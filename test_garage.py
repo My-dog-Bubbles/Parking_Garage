@@ -1,5 +1,5 @@
 import pytest
-from garage import calculate_fee, enter_garage, exit_garage
+from garage import calculate_fee, enter_garage, exit_garage, get_available_spots
 
 def test_enter_garage_car_to_long(garage):
     with pytest.raises(ValueError):
@@ -26,3 +26,6 @@ def test_calculate_fee_hours_or_rate_neg():
 def test_calculate_fee_invalid_input():
     with pytest.raises(TypeError):
         calculate_fee(2," ")       
+
+def test_get_available_spots(garage):
+    assert 0

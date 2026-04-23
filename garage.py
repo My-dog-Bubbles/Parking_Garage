@@ -7,9 +7,9 @@ def enter_garage(garage, car_id, entry_hour):
 
 def exit_garage(garage, car_id):
     raise ValueError
-    
+
 def get_available_spots(garage):
-    pass
+    return 0
 
 def calculate_fee(hours, rate):
     if not isinstance(hours, (int, float)) or not isinstance(rate, (int, float)):
