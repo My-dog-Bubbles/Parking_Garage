@@ -8,7 +8,7 @@ def get_available_spots(garage):
     pass
 
 def calculate_fee(hours, rate):
-    if not isinstance(score, (int, float)):
+    if not isinstance(hours, (int, float)) or not isinstance(rate, (int, float)):
         raise TypeError("hours or rate must be int or float")
     if hours <= 0 or rate <= 0:
         raise ValueError("hour and rate must be over 0")
