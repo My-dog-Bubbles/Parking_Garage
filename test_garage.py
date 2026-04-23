@@ -1,10 +1,10 @@
 import pytest
-from garage import calculate_fee
+from garage import calculate_fee, enter_garage
 
-# def test_enter_garage_car_to_long(garage):
-#     garage["cars"] = {"ca","cb", "cc", "cd", "ce","cf", "cg","vksjd","nknjd","kjsdn","ksdnlsnd"}
-#     with pytest.raises(ValueError):
-#         enter_garage(garage, 5, "2pm")
+def test_enter_garage_car_to_long(garage):
+    with pytest.raises(ValueError):
+        garage["cars"] = {"ca","cb", "cc", "cd", "ce","cf", "cg","vksjd","nknjd","kjsdn","ksdnlsnd"}
+        enter_garage(garage, 5, "2pm")
 
 # def test_enter_garage_car_to_long():
 #     with pytest.raise(ValueError)
@@ -21,3 +21,5 @@ def test_calculate_fee_hours_or_rate_neg():
 def test_calculate_fee_invalid_input():
     with pytest.raises(TypeError):
         calculate_fee(2," ")       
+
+def test
