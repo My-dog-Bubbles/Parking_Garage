@@ -1,5 +1,8 @@
 def enter_garage(garage, car_id, entry_hour):
-    raise ValueError
+    if len(garage["cars"]) >= garage["capacity"]:
+        raise ValueError("TOO many cars")
+    if not isinstance(entry_hours, int):
+        raise TypeError("Not corrrect input")
 
 def exit_garage(garage, car_id):
     pass
