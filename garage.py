@@ -3,6 +3,7 @@ def enter_garage(garage, car_id, entry_hour):
         raise ValueError("TOO many cars")
     if not isinstance(entry_hour, int):
         raise TypeError("Not corrrect input")
+    raise ValueError
 
 def exit_garage(garage, car_id):
     pass
