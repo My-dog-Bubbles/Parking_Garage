@@ -1,5 +1,5 @@
 def enter_garage(garage, car_id, entry_hour):
-    pass
+    raise Valueerror
 
 def exit_garage(garage, car_id):
     pass
