@@ -27,8 +27,9 @@ def test_calculate_fee_invalid_input():
     with pytest.raises(TypeError):
         calculate_fee(2," ")       
 
-def test_get_available_spots(garage):
-    assert 0
+def test_get_available_spots_full(garage):
+    garage["cars"] = {"ca","cb", "cc", "cd", "ce","cf", "cg","vksjd","nknjd","kjsdn","ksdnlsnd"}
+    assert get_available_spots(garage) == 0
 
 @pytest.mark.parametrize("hours, rate, expected", [(2, 2, 4), (6, 5, 30), (1, 2, 2)])
 def test_calculate_fee(hours, rate, expected):
