@@ -17,6 +17,7 @@ def test_enter_garage_invalid_hour(garage):
 
 def test_exit_garage_wrong_ID(garage):
     with pytest.raises(KeyError):
+        garage["cars"] = {1:"tommy car", 2:"angel car"}
         exit_garage(garage, 3)
 
 def test_calculate_fee_hours_or_rate_neg():
