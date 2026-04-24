@@ -16,3 +16,4 @@ def calculate_fee(hours, rate):
         raise TypeError("hours or rate must be int or float")
     if hours <= 0 or rate <= 0:
         raise ValueError("hour and rate must be over 0")
+    return hours*rate
