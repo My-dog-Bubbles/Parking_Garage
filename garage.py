@@ -6,10 +6,14 @@ def enter_garage(garage, car_id, entry_hour):
     raise ValueError
 
 def exit_garage(garage, car_id):
-    raise KeyError
+    if (car_id in garage["cars"])
+        raise KeyError
+    return del((garage["cars"])[car_id])
 
 def get_available_spots(garage):
-    return 0
+    if(garage["capacity"] - len(garage["cars"]) <= 0):
+        return 0
+    return garage["capacity"] - len(garage["cars"])
 
 def calculate_fee(hours, rate):
     if not isinstance(hours, (int, float)) or not isinstance(rate, (int, float)):
