@@ -6,7 +6,7 @@ def enter_garage(garage, car_id, entry_hour):
     raise ValueError
 
 def exit_garage(garage, car_id):
-    raise ValueError
+    raise KeyError
 
 def get_available_spots(garage):
     return 0
