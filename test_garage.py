@@ -9,7 +9,7 @@ def test_enter_garage_car_to_long(garage):
 def test_enter_garage_car_already_in(garage):
     with pytest.raises(ValueError):
         enter_garage(garage,12,2)
-        enter_garage(garage,12,2)
+        enter_garage(garage,12,3)
 
 def test_enter_garage_invalid_hour(garage):
     with pytest.raises(TypeError):
