@@ -30,6 +30,6 @@ def test_calculate_fee_invalid_input():
 def test_get_available_spots(garage):
     assert 0
 
-@pytest.mark.parametrize("hours, rate, expected", [(2, 2, 2), (6, 5, 30), (1, 2, 2)])
+@pytest.mark.parametrize("hours, rate, expected", [(2, 2, 4), (6, 5, 30), (1, 2, 2)])
 def test_calculate_fee(hours, rate, expected):
     assert calculate_fee(hours, rate) == expected
